@@ -13,22 +13,22 @@ public class Main {
         loadOp.addResource(electricity);
         loadOp.addAGV(agv1);
 
-        TransportOperation transportOp = new TransportOperation("Transport Operation");
+        TransportOperation transportOp = new TransportOperation("Transports Operation");
         transportOp.addResource(labor);
 
 
-        SortingOperation sortOp = new SortingOperation("Sorting Operation");
+        SortingOperation sortOp = new SortingOperation("Sorting Operations");
         sortOp.addResource(packaging);
         sortOp.addAGV(agv1);
         
         
 
-        IndustrialProcess packagingProcess = new IndustrialProcess("Packaging Process");
+        IndustrialProcess packagingProcess = new IndustrialProcess("Packaging Processes");
         packagingProcess.addOperation(loadOp);
         packagingProcess.addOperation(sortOp);
         
 
-        IndustrialProcess assemblyProcess = new IndustrialProcess("Assembly Process");
+        IndustrialProcess assemblyProcess = new IndustrialProcess("Assembly Processes");
         
         assemblyProcess.addOperation(transportOp);
 
