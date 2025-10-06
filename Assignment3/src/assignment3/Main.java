@@ -7,7 +7,7 @@ public class Main {
         Resource packaging = new Resource("Packaging material", 30, 2); // $60
 
         AGV agv1 = new AGV("A01", "Loader AGV", 12, 10);   // $120
-        AGV agv2 = new AGV("A02", "Transport AGV", 10, 15); // $150
+
 
         LoadingOperation loadOp = new LoadingOperation("Loading Operation");
         loadOp.addResource(electricity);
@@ -15,22 +15,27 @@ public class Main {
 
         TransportOperation transportOp = new TransportOperation("Transport Operation");
         transportOp.addResource(labor);
-        transportOp.addAGV(agv2);
+
 
         SortingOperation sortOp = new SortingOperation("Sorting Operation");
         sortOp.addResource(packaging);
         sortOp.addAGV(agv1);
+        
+        
 
         IndustrialProcess packagingProcess = new IndustrialProcess("Packaging Process");
         packagingProcess.addOperation(loadOp);
         packagingProcess.addOperation(sortOp);
+        
 
         IndustrialProcess assemblyProcess = new IndustrialProcess("Assembly Process");
+        
         assemblyProcess.addOperation(transportOp);
 
-        Warehouse warehouse = new Warehouse("Central Distribution Center");
+        Warehouse warehouse = new Warehouse("Warehouse");
+        
         warehouse.addProcess(packagingProcess);
-        warehouse.addProcess(assemblyProcess);
+ 
 
         warehouse.simulate();
     }

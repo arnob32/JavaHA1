@@ -10,6 +10,6 @@ public class Vehicle {
     }
 
     public void performTask(String task) {
-        System.out.println(type + " (ID: " + id + ") performing: " + task);
+        System.out.println(type + " (ID: " + id + ") Tasks: " + task);
     }
 }

@@ -21,7 +21,7 @@ public class Warehouse {
     }
 
     public void simulate() {
-        System.out.println("\n=== Simulating Warehouse: " + name + " ===");
+        System.out.println("\n=== Processe of warehouse: " + name + " ===");
         for (IndustrialProcess p : processes) p.start();
         System.out.println("\nTotal warehouse cost: $" + String.format("%.2f", calculateTotalCost()));
     }
